@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+#canvas1 {
+  /* border: 5px solid black; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img {
+  display: none;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  /* transform: translate(-50%, -50%); */
+  font-size: 100px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Contenedor principal de controles */
+#mobile-controls {
+  position: fixed;
+  bottom: 10px; /* Un poco más elevado para comodidad del pulgar */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Base del Joystick */
+#joystick-base {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.3) 100%);
+  backdrop-filter: blur(5px); /* Efecto cristal */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: relative;
+  pointer-events: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* El stick (la palanca) */
+#joystick-stick {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #666 0%, #222 100%);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* Botón de Acción (Enter) */
+#action-button {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  touch-action: none;
+  user-select: none;
+  transition: all 0.1s ease;
+}
+
+/* Efecto de pulsación para el botón */
+#action-button:active {
+  transform: scale(0.85);
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}

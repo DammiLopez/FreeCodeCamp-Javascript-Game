@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <div id="loading">LOADING...</div> -->
+    <canvas id="canvas1"></canvas>
+    <!-- player -->
+    <img id="player" src="./assets/player/player.png" alt="spider" />
+    <img id="life" src="./assets/player/lives.png" alt="life" />
+
+    <!-- controls -->
+    <div id="mobile-controls">
+      <div id="joystick-base">
+        <div id="joystick-stick"></div>
+      </div>
+
+      <button id="action-button">Action</button>
+    </div>
+    <!-- background -->
+    <img
+      id="layer1"
+      src="./assets/city_background_layers/layer-1.png"
+      alt="layer-1"
+    />
+    <img
+      id="layer2"
+      src="./assets/city_background_layers/layer-2.png"
+      alt="layer-2"
+    />
+    <img
+      id="layer3"
+      src="./assets/city_background_layers/layer-3.png"
+      alt="layer-3"
+    />
+    <img
+      id="layer4"
+      src="./assets/city_background_layers/layer-4.png"
+      alt="layer-4"
+    />
+    <img
+      id="layer5"
+      src="./assets/city_background_layers/layer-5.png"
+      alt="layer-5"
+    />
+    <!-- enemies -->
+    <img id="spider" src="./assets/enemies/enemy_spider_big.png" alt="spider" />
+    <img id="plant" src="./assets/enemies/enemy_plant.png" alt="plant" />
+    <img id="fly" src="./assets/enemies/enemy_fly.png" alt="fly" />
+    <!-- effects -->
+    <img id="fire" src="./assets/effects/fire.png" alt="fire" />
+    <img id="boom" src="./assets/effects/boom.png" alt="boom" />
+
+    <!-- scripts -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
